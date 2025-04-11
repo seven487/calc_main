@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- صفحه اصلی ماشین حساب -->
+<!-- LinearLayout: چیدمان عمودی برای کل صفحه -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F0F0"> <!-- رنگ پس‌زمینه خاکستری روشن -->
+
+    <!-- نمایشگر ماشین حساب -->
+    <!-- TextView: برای نمایش اعداد و نتایج -->
+    <TextView
+        android:id="@+id/display"
+        android:layout_width="match_parent"
+        android:layout_height="120dp" <!-- ارتفاع ثابت برای نمایشگر -->
+        android:layout_margin="16dp" <!-- فاصله از لبه‌ها -->
+        android:background="#FFFFFF" <!-- پس‌زمینه سفید -->
+        android:gravity="end|bottom" <!-- متن از راست و پایین شروع شود -->
+        android:padding="16dp" <!-- فاصله متن از لبه‌های نمایشگر -->
+        android:text="0" <!-- مقدار پیش‌فرض -->
+        android:textColor="#000000" <!-- رنگ متن سیاه -->
+        android:textSize="48sp" <!-- اندازه متن بزرگ -->
+        android:elevation="4dp"/> <!-- سایه برای عمق بیشتر -->
+
+    <!-- شبکه دکمه‌های ماشین حساب -->
+    <!-- GridLayout: چیدمان شبکه‌ای برای دکمه‌ها -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" <!-- فضای باقیمانده را پر کند -->
+        android:columnCount="4" <!-- 4 ستون -->
+        android:rowCount="5" <!-- 5 ردیف -->
+        android:padding="8dp"> <!-- فاصله از لبه‌ها -->
+
+        <!-- ردیف اول -->
+        <!-- دکمه پاک کردن -->
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1" <!-- عرض متناسب با ستون -->
+            android:layout_rowWeight="1" <!-- ارتفاع متناسب با ردیف -->
+            android:layout_margin="4dp" <!-- فاصله از دکمه‌های مجاور -->
+            android:backgroundTint="#FF5722" <!-- رنگ پس‌زمینه قرمز -->
+            android:text="C"
+            android:textColor="#FFFFFF" <!-- رنگ متن سفید -->
+            android:textSize="24sp"/> <!-- اندازه متن -->
+
+        <!-- دکمه‌های اعداد -->
+        <Button
+            android:id="@+id/btn7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp"
+            android:backgroundTint="#2196F3" <!-- رنگ پس‌زمینه آبی -->
+            android:text="7"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"/>
+
+        <!-- ادامه دکمه‌های اعداد با همان خصوصیات -->
+        <Button
+            android:id="@+id/btn8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp"
+            android:backgroundTint="#2196F3"
+            android:text="8"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"/>
+
+        <Button
+            android:id="@+id/btn9"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp"
+            android:backgroundTint="#2196F3"
+            android:text="9"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"/>
+
+        <!-- ردیف دوم -->
+        <!-- دکمه عملیات تقسیم -->
+        <Button
+            android:id="@+id/btnDivide"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp"
+            android:backgroundTint="#FF9800" <!-- رنگ پس‌زمینه نارنجی -->
+            android:text="/"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"/>
+
+        <!-- ادامه دکمه‌های اعداد -->
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp"
+            android:backgroundTint="#2196F3"
+            android:text="4"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"/>
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp"
+            android:backgroundTint="#2196F3"
+            android:text="5"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"/>
+
+        <Button
+            android:id="@+id/btn6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp"
+            android:backgroundTint="#2196F3"
+            android:text="6"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"/>
+
+        <!-- ردیف سوم -->
+        <!-- دکمه عملیات ضرب -->
+        <Button
+            android:id="@+id/btnMultiply"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp"
+            android:backgroundTint="#FF9800"
+            android:text="×"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"/>
+
+        <!-- ادامه دکمه‌های اعداد -->
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp"
+            android:backgroundTint="#2196F3"
+            android:text="1"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"/>
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp"
+            android:backgroundTint="#2196F3"
+            android:text="2"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"/>
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp"
+            android:backgroundTint="#2196F3"
+            android:text="3"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"/>
+
+        <!-- ردیف چهارم -->
+        <!-- دکمه عملیات تفریق -->
+        <Button
+            android:id="@+id/btnMinus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp"
+            android:backgroundTint="#FF9800"
+            android:text="-"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"/>
+
+        <!-- دکمه صفر (پهن‌تر از بقیه) -->
+        <Button
+            android:id="@+id/btn0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnSpan="2" <!-- دو ستون را اشغال کند -->
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp"
+            android:backgroundTint="#2196F3"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"/>
+
+        <!-- دکمه نقطه اعشار -->
+        <Button
+            android:id="@+id/btnDot"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp"
+            android:backgroundTint="#2196F3"
+            android:text="."
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"/>
+
+        <!-- ردیف پنجم -->
+        <!-- دکمه عملیات جمع -->
+        <Button
+            android:id="@+id/btnPlus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp"
+            android:backgroundTint="#FF9800"
+            android:text="+"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"/>
+
+        <!-- دکمه مساوی (پهن‌تر از بقیه) -->
+        <Button
+            android:id="@+id/btnEquals"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnSpan="3" <!-- سه ستون را اشغال کند -->
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="4dp"
+            android:backgroundTint="#4CAF50" <!-- رنگ پس‌زمینه سبز -->
+            android:text="="
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"/>
+
+    </GridLayout>
+</LinearLayout> 
